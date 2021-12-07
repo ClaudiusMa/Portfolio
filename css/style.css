@@ -1,0 +1,714 @@
+/* universal */
+
+a.current{
+	color: var(--main);
+	font-weight: var(--bold-weight); 
+	/* there is a bug, it is not bold */
+  }
+
+HTML{
+	scroll-behavior: smooth;
+}
+
+* {
+	margin:0;
+	padding:0;
+	border:0;
+	vertical-align: baseline;
+	box-sizing:border-box;
+	-webkit-tap-highlight-color: transparent;
+}
+
+body{
+	/* general setting */
+	--main:#C85C5C; /* change the html head */
+	--secondary:#F9975D;
+	--darker: #000;
+	--bg: #fff;
+	--bg2: #efefef;
+
+	/* picture */
+	--curve: cubic-bezier(.08,.82,.2,1);
+    --curve-out: cubic-bezier(.95,.05,.8,.04);
+    --duration: .3s;
+    --duration-out: .17s;
+    --transition: all var(--duration) var(--curve);
+    --transition-out: all var(--duration-out) var(--curve-out);
+
+	color: var(--text);
+    line-height: 1;
+    background: var(--bg);
+    margin: var(--mask-width) var(--mask-width) 0;
+    scroll-behavior: smooth;
+
+	/* border setting */
+	--border: #ddd;
+	--border2: #888;
+	--border-type: dotted;
+	--border-width: 1px;
+	--standard-border: var(--border-width) var(--border-type) var(--border);
+	--happy-border: var(--border-width) var(--border-type) var(--main); /* need to figure out hoover on axis */
+	--radius: 0px;
+
+	/* header */
+	--side-width: 250px;
+
+	/* margin-setting */
+	--h-margin: 1.25rem;
+
+	/* mask setting */
+	--mask-width: .7rem;
+
+	/* font setting */
+    --default-font: Helvetica,sans-serif;
+    font-variant-ligatures: common-ligatures;
+    text-rendering: optimizeSpeed;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Helvetica",sans-serif;
+    text-align: left;
+	--bold-weight: 700;
+	--semibold-weight:500;
+
+	--text: #272727;
+	--text2: #595959;
+	--text3: #989898;
+	--text4: #d5d5d5;
+	--fz1: 1.87em;
+	--fz2: 1.47em;
+	--fz3: 0.87em;
+
+
+}
+
+
+/* main page */
+
+/* text style */
+h1 {
+    font-size: var(--fz1);
+    font-weight: var(--bold-weight);
+    line-height: 1.26;
+    position: relative;
+    color: var(--text);
+    overflow: hidden;
+}
+
+h2 {
+	font-size:var(--fz2);
+	font-weight: var(--semibold-weight);
+	line-height: 1;
+    position: relative;
+    color: var(--text);
+    overflow: hidden;
+	margin-bottom: 1.2em;
+}
+
+/* mask */ 
+.mt {
+    top: 0;
+    height: var(--mask-width);
+}
+
+.mb, .mt {
+    height: 0;
+    width: 100%;
+    left: 0;
+}
+.mb {
+    bottom: 0;
+    height: var(--mask-width);
+}
+.ml, .ml2 {
+    left: 0;
+    width: var(--mask-width);
+}
+.mv {
+    bottom: 0;
+    height: 80vh;
+    width: 0;
+}
+.ml, .ml2 {
+    left: 0;
+    width: var(--mask-width);
+}
+.ml2, .mr2 {
+    bottom:0;
+    top: 0;
+}
+.mr, .mr2 {
+    right: 0;
+    width: var(--mask-width);
+}
+.mask {
+    position: fixed;
+    z-index: 999;
+    border: calc(var(--mask-width)/ 2) solid var(--main);
+    background: var(--main);
+    pointer-events: none;
+}
+
+
+.main {
+	display: flex;
+	flex-direction: row;
+	background: var(--bg);
+	transition: background-color var(--duration) var(--curve);
+}
+
+/* header */
+header {
+    padding: 0.5rem var(--h-margin);
+    height: 100%;
+    width: 240px;
+    width: var(--side-width);
+    border-right: var(--standard-border);
+    position: fixed;
+    overflow: auto;
+    background-color: var(--bg);
+    transition: background-color var(--duration) var(--curve),border-color var(--duration) var(--curve),filter var(--duration) var(--curve);
+    scrollbar-width: none;
+    font-size: var(--fz3);
+}
+
+.photo {
+    max-width: 20rem;
+}
+
+.My_Intro {
+	font-weight: var(--bold-weight);
+    line-height: 1.5;
+    text-align: center;
+    margin: 0 auto 2rem;
+	display:inline-block
+}
+
+
+.nav{
+	margin: 0 0 2em;
+}
+
+.nav ul{
+    display: flex;
+    flex-direction: column;
+}
+
+a{
+	color: inherit;
+    cursor: pointer;
+    transition: color var(--duration) var(--curve),background-color var(--duration) var(--curve);
+    touch-action: manipulation;
+
+}
+
+.nav a{
+	text-decoration: none;
+    transition: var(--transition-out);
+    display: flex;
+    align-items: center;
+    padding: 0.8rem 0;
+    border-bottom: var(--standard-border);
+    font-weight: 400;
+    line-height: 1;
+}
+
+a .material-icons{
+	font-size: 0.7rem;
+	/* don't change this, it's icon in hearder */
+}
+
+.side_link{
+	/* Need add listern to change the color when hoover on  */
+}
+
+.nav_label{
+    padding: 2.5em 0 0.3em;
+    text-align: left;
+    font-weight: var(--bold-weight);
+    color: var(--main);
+}
+
+/* For the first page */
+
+.content {
+    animation: SlowShow calc(2 * var(--duration)) var(--curve) both;
+    margin-left: var(--side-width);
+    padding: var(--h-margin) var(--h-margin) 0;
+}
+@keyframes SlowShow{
+	0% {opacity:0;}
+	100% {opacity:1;}
+}
+/* need to test agian !!!! */
+
+.section {
+    width: 100%;
+}
+
+.content>.inner {
+    max-width: 90rem;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    position: relative;
+}
+
+.item:nth-of-type(1) {
+    order: 1;
+}
+/* check this again */
+
+.item.page-item {
+    padding-bottom: 0;
+    border: none;
+    margin-bottom: 0;
+}
+
+.item {
+    border-bottom: var(--standard-border);
+    order: 12;
+    position: relative;
+    flex: 1 34%;
+    font-size: var(--fz3);
+    padding: calc(var(--h-margin) * 1.3) 0 calc(var(--h-margin) * 1.3) calc(var(--h-margin) * 2);
+}
+
+.item.page-item>.inner{
+    border-right: none;
+}
+
+.item>.inner {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border-right: var(--standard-border);
+    padding-right: calc(var(--h-margin) * 2);
+}
+
+.page-item .item-desc {
+    margin-top: 0;
+}
+
+.item-desc {
+    color: var(--text2);
+    text-align: left;
+    margin: 0.8em auto 0;
+    line-height: 1.7;
+    position: relative;
+}
+
+.page-item h1 {
+    margin-bottom: 1.5em;
+}
+
+.summaries {
+    width: 100%;
+    line-height: 1.5;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.summary {
+    margin: 0;
+    padding: 1.5rem 0;
+    flex-basis: 100%;
+    font-weight: 400;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-bottom: var(--standard-border);
+    flex-shrink: 2;
+    flex-grow: 1;
+}
+
+.summary>.inner {
+    padding: 1rem 2rem 1rem 0;
+    height: 100%;
+}
+
+/* The history axis */
+.history {
+    --item-visible-height: 4rem;
+    --item-height: 6rem;
+    --item-diff: 1.5rem;
+    --item-desc: 2.8rem;
+    transition: var(--transition);
+    overflow: visible;
+}
+
+#history>.inner {
+    padding: calc(1.5vmax + 1.5vmin) 0;
+}
+
+.summary>.inner {
+    width: 100%;
+}
+
+.history>.inner {
+    border: none;
+}
+.history .summary-desc {
+    margin-bottom: 0;
+    overflow: visible;
+}
+.summary-desc {
+    margin: 0 0 0.5rem;
+    color: var(--text2);
+}
+.h-items {
+    position: relative;
+    width: 100%;
+    height: var(--item-visible-height);
+}
+
+.h-item {
+    position: absolute;
+    top: 0;
+    font-size: 0.7em;
+    height: var(--item-height);
+    line-height: 1.5;
+    z-index: 2;
+    transition: .12s ease-out .1s;
+    animation: h-enter .35s ease-out both;
+}
+
+@keyframes h-enter{
+	0%{
+		transform:translateY(1em) skewY(6deg);
+		opacity:0}
+
+	40%{transform:translateY(-.2em) skewY(3deg);
+		opacity:1}
+
+	100%{transform:none}
+	}
+
+.h-title {
+    font-weight: var(--bold-weight);
+    height: 1rem;
+    width: auto;
+    display: inline-block;
+    line-height: 1;
+    transition: var(--transition-out);
+    user-select: none;
+    border-bottom: var(--standard-border);
+}
+
+.h-desc {
+    border-left: var(--standard-border);
+    height: var(--item-desc);
+    transition: .12s ease-out;
+}
+
+.h-item.y-l .h-desc {
+    height: calc(var(--item-desc) - var(--item-diff));
+}
+
+.h-item.y-l {
+    top: var(--item-diff);
+    height: calc(var(--item-height) - var(--item-diff));
+}
+.h-axis {
+    height: 0.2rem;
+    width: 100%;
+    position: relative;
+    z-index: 8;
+}
+
+.h-axis::before {
+    content: "";
+    position: absolute;
+    height: 0.5rem;
+    width: 0.5rem;
+    border-radius: 50%;
+    top: -0.15rem;
+    left: -0.15rem;
+    background: var(--secondary);
+    z-index: 9;
+    animation: dot-in .5s cubic-bezier(.7,0,0,.8) both;
+    transition: var(--transition);
+}
+@keyframes dot-in{
+	0%{transform:scale(0)}
+	50%{transform:scale(1.2)}
+	80%{transform:scale(.8)}
+	100%{transform:none}
+}
+
+.h-axis::after {
+    background: linear-gradient(to right,var(--secondary) 95%,var(--bg) 100%);
+    content: "";
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: block;
+    position: absolute;
+    transform-origin: left;
+    border-radius: 0.1rem;
+    transition: var(--transition);
+    animation: axis-in .6s cubic-bezier(.7,0,0,.8) .3s both;
+}
+@keyframes axis-in{
+	0%{transform:scaleX(.5);opacity:0}
+	100%{transform:scaleX(1);opacity:1}
+}
+
+.h-bottom {
+    position: relative;
+    width: 100%;
+    height: 0.8rem;
+    transition: .12s ease-out .1s;
+}
+
+.h-year {
+    position: absolute;
+    top: 0.4em;
+    font-size: 0.7em;
+    height: 1.1rem;
+    display: flex;
+    z-index: 19;
+    align-items: flex-end;
+    transition: var(--transition);
+    animation: year-in .4s ease-out both;
+}
+@keyframes year-in{
+	0% {transform: translateY(-0.5em);opacity: 0;}
+	40% {transform: translateY(0.1em);opacity: 1;}
+	100% {transform: none;}
+}
+.h-year .h-year-title {
+    position: relative;
+    transform: translateX(-50%);
+}
+.h-year-title {
+    transition: .12s ease-out .1s;
+}
+.h-year::before {
+    content: "";
+    width: 2px;
+    height: 0.6rem;
+    position: relative;
+    background: var(--bg);
+    top: -1rem;
+    left: 0;
+}
+
+/* accesiblity adjustment */
+@media (max-width: 1100px){
+	.h-title{
+		transform: rotate(-33deg);
+    	transform-origin: bottom left;
+    	font-size: 0.7em;
+    	height: 0.8rem;
+	}  
+}
+
+@media (max-width: 750px){
+	body {
+		--side-width: 0px;
+		--mask-width: 1.5vw;
+	}
+	#history{
+		display:none;
+	}
+	.header{
+		display:none;
+	}
+	
+}
+/* .projects>.inner{
+	display:flex;
+	flex-wrap:wrap;
+}
+.project_1, .project_2, .project_3, .project_4{
+	flex-basis:50%
+} */
+.product-container{
+	display: grid;
+	grid-gap: 1.5rem;
+}
+.product-container img{
+	height: auto;
+	width:auto;
+	max-height:100%;
+	justify-content: center;
+}
+@media (min-width: 1100px){
+	.product-container{
+		grid-template-columns: 22% 22% 22% 22%;
+		grid-template-rows: 100%;
+	}
+}
+@media (max-width: 1100px){
+	.product-container{
+		grid-template-columns: 45% 45%;
+		grid-template-rows: 45% 45% ;
+	}
+}
+@media (max-width: 750px){
+	.product-container{
+		grid-template-columns: 100%;
+		grid-template-rows: 22% 22% 22% 22%;
+	}
+}
+
+
+
+
+.word_word{
+	margin-top: 1rem;
+}
+
+.img1{
+	padding-top: 2rem;
+}
+.img2{
+
+}
+
+.footer {
+    color: var(--text3);
+    text-align: center;
+    padding: 2em 0 3em var(--side-width);
+    font-size: .875rem;
+    line-height: 1.7;
+}
+
+.inner-footer {
+    border: none;
+}
+
+/* 
+.grid-container{
+	display: grid;
+	grid-template-columns: 18% 18% 18% 18% 18%;
+	grid-template-rows: 100px 100px 100px 100px 100px;
+	grid-gap: 20px;
+
+}
+#My_Intro{
+	grid-column: 1/ 3;
+	grid-row: 1 / 1;
+	font-size: 2vh;
+	justify-items: start;
+	align-items: start;
+	margin:0px;
+	padding: 0px;
+}
+
+#My_Des{
+	grid-column: 1/ 3;
+	grid-row: 2 / 2;
+	font-size: 2vh;
+	justify-items: start;
+	align-items: start;
+	margin:0px;
+	padding: 0px;
+}
+
+#My-Photo{
+	grid-column: 1/ 2;
+	grid-row: 3 / 5;
+	justify-items: start;
+	align-items: start;
+	margin:0px;
+	padding: 0px;
+}
+
+h1{
+	font-size: 2em; 
+	font-weight: bold;
+}
+
+.grid-container>ul{
+	grid-column: 5;
+	grid-row: 1 / 1;
+	font-size: 2vh;
+	justify-items: start;
+	align-items: start;
+	margin:0px;
+	padding: 0px;
+	display: flex;
+	justify-content:space-evenly ;
+}
+
+.grid-container>p{
+	grid-column:3;
+	grid-row:5;
+	font-size: 2vh;
+} */
+/* img{
+	display:flex;
+    height: 80%;
+    width:80%;
+	align-items: center;
+	justify-content: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+} */
+
+/* .product-container{
+	display: grid;
+	grid-template-columns: 30% 30% 30%;
+	grid-template-rows: 200px 200px ;
+	grid-gap: 20px;
+}
+
+#TCL_Cover{
+	grid-column:1/1;
+	grid-row:1/1;
+}
+#Jewelry_Cover{
+	grid-row:2/1;
+}
+#Badge_Cover{
+	grid-row:3/1;
+}
+.product{
+	width:100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+}
+
+h2{
+	font-size: 2em; 
+	font-weight: bold;
+}
+
+
+p, h1, h2 {
+    padding: 10px;
+}
+
+header, nav, main, h1, footer{
+	margin: 10px 0;
+}
+
+footer{
+	display:block;
+	color: #181D31;
+	width:100%;
+	background-color: #E6DDC4;
+	bottom:0;
+
+}
+
+nav{
+	display: flex;
+	justify-content: space-evenly;
+}
+nav li{
+
+	background-color: #E6DDC4;
+	padding:10px;
+	width:auto;
+	border:1px solid black;
+	display: inline-block;
+	width: auto;
+} */
+
