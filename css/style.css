@@ -93,6 +93,7 @@ body{
 }
 /* Style the navigation menu */
 .topnav {
+    display: none;
     overflow: hidden;
     background-color: var(--main);
     position: relative;
