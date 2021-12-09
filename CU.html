@@ -17,19 +17,60 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="stylesheet" href="css/balloon.min.css">
 
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-EQPRP1PKE2"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'G-EQPRP1PKE2');
+	</script>
+
 	<title>Claudius' Portfolio</title>
 </head>
 
 <body>
 	<div class="mask mt"></div>
 	<div class="mask mb"></div>
-	<div class="mask mv ml"></div>
-	<div class="mask mv mr"></div>
-	<div class="mask mv ml2"></div>
-	<div class="mask mv mr2"></div>
+	<div class="mask ml"></div>
+	<div class="mask mr"></div>
 	
 	<main>
 		<div class="main">
+			<!-- mobile hamburgerbar  -->
+			<div class="topnav">
+				<a  class="active" href="index.html">Ma</a>
+				<!-- Navigation links (hidden by default) -->
+				<div id="myLinks">
+				  <a href="TCL.html">Smart TV</a>
+				  <a href="Jewelry.html">Jewelry </a>
+				  <a href="Badge.html">Badge </a>
+				</div>
+				<!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+				<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+				  <i class="fa fa-bars"></i>
+				</a>
+			  </div>
+<script>
+	function myFunction() {
+		var x = document.getElementById("myLinks");
+  		if (x.style.display === "block") {
+    		x.style.display = "none";
+  			} 
+  		else {
+    		x.style.display = "block";
+ 			 }
+	}
+</script>
+
+
+
+
+
 			<header class="header">
 				<div class="inner">
 					<div class="photo">

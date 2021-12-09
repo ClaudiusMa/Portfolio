@@ -1,10 +1,12 @@
 /* universal */
 
-a.current{
+.side_link a.current{
 	color: var(--main);
-	font-weight: var(--bold-weight); 
-	/* there is a bug, it is not bold */
+	/* font-weight: var(--bold-weight);  */
   }
+
+/* remember to do the motion reduce */
+/* remember to do a hamburger nav */
 
 HTML{
 	scroll-behavior: smooth;
@@ -26,19 +28,18 @@ body{
 	--darker: #000;
 	--bg: #fff;
 	--bg2: #efefef;
+    margin: var(--mask-width) var(--mask-width) 0;
+    line-height: 1;
+    color: var(--text);
+    background: var(--bg);
 
-	/* picture */
+	/* motion */
 	--curve: cubic-bezier(.08,.82,.2,1);
     --curve-out: cubic-bezier(.95,.05,.8,.04);
     --duration: .3s;
     --duration-out: .17s;
     --transition: all var(--duration) var(--curve);
     --transition-out: all var(--duration-out) var(--curve-out);
-
-	color: var(--text);
-    line-height: 1;
-    background: var(--bg);
-    margin: var(--mask-width) var(--mask-width) 0;
     scroll-behavior: smooth;
 
 	/* border setting */
@@ -47,7 +48,7 @@ body{
 	--border-type: dotted;
 	--border-width: 1px;
 	--standard-border: var(--border-width) var(--border-type) var(--border);
-	--happy-border: var(--border-width) var(--border-type) var(--main); /* need to figure out hoover on axis */
+	--happy-border: var(--border-width) var(solid) var(--main); /* need to figure out hoover on axis */
 	--radius: 0px;
 
 	/* header */
@@ -80,6 +81,60 @@ body{
 
 }
 
+/* mobile header  */
+/* Style the navigation menu */ 
+
+/* need to make more appealing  */
+
+@media (max-width: 750px){
+	.main .topnav {
+		display:inherit;
+	}
+}
+/* Style the navigation menu */
+.topnav {
+    overflow: hidden;
+    background-color: var(--main);
+    position: relative;
+  }
+  
+  /* Hide the links inside the navigation menu (except for logo/home) */
+  .topnav #myLinks {
+    display: none;
+    overflow: visible;
+    width:700px;
+  }
+  
+  /* Style navigation menu links */
+  .topnav a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  }
+  
+  /* Style the hamburger menu */
+  .topnav a.icon {
+    background:var(--main);
+    display: block;
+    position: absolute;
+    right: var(--mask-width);
+    top: var(--mask-width);
+    z-index: 999;
+  }
+  
+  /* Add a grey background color on mouse-over */
+  .topnav a:hover {
+    background-color:var(--secondary);
+  }
+  
+  /* Style the active link (or home/logo) */
+  .active {
+    background-color:var(--main);
+  }
+
+
 
 /* main page */
 
@@ -110,7 +165,6 @@ h2 {
 }
 
 .mb, .mt {
-    height: 0;
     width: 100%;
     left: 0;
 }
@@ -118,30 +172,22 @@ h2 {
     bottom: 0;
     height: var(--mask-width);
 }
-.ml, .ml2 {
-    left: 0;
+
+.ml, .mr{
     width: var(--mask-width);
+    height: 100%;
 }
-.mv {
-    bottom: 0;
-    height: 80vh;
-    width: 0;
+
+.ml{
+    left:0;
 }
-.ml, .ml2 {
-    left: 0;
-    width: var(--mask-width);
+.mr{
+    right:0;
 }
-.ml2, .mr2 {
-    bottom:0;
-    top: 0;
-}
-.mr, .mr2 {
-    right: 0;
-    width: var(--mask-width);
-}
+
 .mask {
     position: fixed;
-    z-index: 999;
+    z-index: 998;
     border: calc(var(--mask-width)/ 2) solid var(--main);
     background: var(--main);
     pointer-events: none;
@@ -416,6 +462,7 @@ a .material-icons{
     z-index: 8;
 }
 
+
 .h-axis::before {
     content: "";
     position: absolute;
@@ -579,136 +626,3 @@ a .material-icons{
 .inner-footer {
     border: none;
 }
-
-/* 
-.grid-container{
-	display: grid;
-	grid-template-columns: 18% 18% 18% 18% 18%;
-	grid-template-rows: 100px 100px 100px 100px 100px;
-	grid-gap: 20px;
-
-}
-#My_Intro{
-	grid-column: 1/ 3;
-	grid-row: 1 / 1;
-	font-size: 2vh;
-	justify-items: start;
-	align-items: start;
-	margin:0px;
-	padding: 0px;
-}
-
-#My_Des{
-	grid-column: 1/ 3;
-	grid-row: 2 / 2;
-	font-size: 2vh;
-	justify-items: start;
-	align-items: start;
-	margin:0px;
-	padding: 0px;
-}
-
-#My-Photo{
-	grid-column: 1/ 2;
-	grid-row: 3 / 5;
-	justify-items: start;
-	align-items: start;
-	margin:0px;
-	padding: 0px;
-}
-
-h1{
-	font-size: 2em; 
-	font-weight: bold;
-}
-
-.grid-container>ul{
-	grid-column: 5;
-	grid-row: 1 / 1;
-	font-size: 2vh;
-	justify-items: start;
-	align-items: start;
-	margin:0px;
-	padding: 0px;
-	display: flex;
-	justify-content:space-evenly ;
-}
-
-.grid-container>p{
-	grid-column:3;
-	grid-row:5;
-	font-size: 2vh;
-} */
-/* img{
-	display:flex;
-    height: 80%;
-    width:80%;
-	align-items: center;
-	justify-content: center;
-	padding-top: 20px;
-	padding-bottom: 20px;
-} */
-
-/* .product-container{
-	display: grid;
-	grid-template-columns: 30% 30% 30%;
-	grid-template-rows: 200px 200px ;
-	grid-gap: 20px;
-}
-
-#TCL_Cover{
-	grid-column:1/1;
-	grid-row:1/1;
-}
-#Jewelry_Cover{
-	grid-row:2/1;
-}
-#Badge_Cover{
-	grid-row:3/1;
-}
-.product{
-	width:100%;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-
-}
-
-h2{
-	font-size: 2em; 
-	font-weight: bold;
-}
-
-
-p, h1, h2 {
-    padding: 10px;
-}
-
-header, nav, main, h1, footer{
-	margin: 10px 0;
-}
-
-footer{
-	display:block;
-	color: #181D31;
-	width:100%;
-	background-color: #E6DDC4;
-	bottom:0;
-
-}
-
-nav{
-	display: flex;
-	justify-content: space-evenly;
-}
-nav li{
-
-	background-color: #E6DDC4;
-	padding:10px;
-	width:auto;
-	border:1px solid black;
-	display: inline-block;
-	width: auto;
-} */
-
