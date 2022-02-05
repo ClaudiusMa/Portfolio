@@ -235,7 +235,6 @@ header {
     position: fixed;
     overflow: auto;
     background-color: var(--bg);
-    transition: background-color var(--duration) var(--curve),border-color var(--duration) var(--curve),filter var(--duration) var(--curve);
     scrollbar-width: none;
     font-size: var(--fz3);
 }
@@ -244,13 +243,20 @@ header {
     max-width: 20rem;
 }
 
-.My_Intro {
+.My_Intro{
+    margin: 0 auto 2rem;
+	display:block;
+    margin-left: auto;
+    margin-right: auto;
+    
+
+}
+.My_Intro p{
 	font-weight: var(--bold-weight);
     line-height: 1.5;
     text-align: center;
-    margin: 0 auto 2rem;
-	display:inline-block
 }
+
 
 
 .nav{
