@@ -22,8 +22,8 @@ HTML{
 
 body{
 	/* general setting */
-	--main:#C85C5C; /* change the html head */
-	--secondary:#F9975D;
+	--main:#D05A6E; /* change the html head 所谓今样，就是“当世风”的意思，形式为七五言四句，在平安中末期流行，而平安被誉为日本文学的顶峰*/ 
+	--secondary:#EB7A77;
 	--darker: #000;
 	--bg: #fff;
 	--bg2: #efefef;
@@ -69,8 +69,8 @@ body{
 	--bold-weight: 700;
 	--semibold-weight:500;
 
-	--text: #272727;
-	--text2: #595959;
+	--text: #1C1C1C; /*墨水的颜色*/
+	--text2: #434343;
 	--text3: #989898;
 	--text4: #d5d5d5;
 	--fz1: 1.87em;
