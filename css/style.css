@@ -82,7 +82,7 @@ body{
 
 /* General accessibility  */
 @media (prefers-reduced-motion: reduce){
-    .main .h-item, .main .content, .main .h-axis::after, .main .h-axis::before, .main .h-year{
+    .main .h-item, .main, .main .h-axis::after, .main .h-axis::before, .main .h-year{
         animation:none;
     }
 }
@@ -305,63 +305,29 @@ a .material-icons{
 
 /* For the first page */
 
-.content {
-    animation: SlowShow calc(2 * var(--duration)) var(--curve) both;
+.overview:nth-of-type(1) {
+    order: 1;
+}
+/* check this again */
+
+.overview {
+    position: relative;
+    font-size: var(--fz3);
+    padding: calc(var(--h-margin) * 1.5) calc(var(--h-margin) * 2);
+    max-width: 90rem;
     margin-left: var(--side-width);
-    padding: var(--h-margin) var(--h-margin) 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    animation: SlowShow calc(4 * var(--duration)) var(--curve) both;
 }
 @keyframes SlowShow{
 	0% {opacity:0;}
 	100% {opacity:1;}
 }
-/* need to test agian !!!! */
 
-.section {
-    width: 100%;
-}
-
-.content>.inner {
-    max-width: 90rem;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    position: relative;
-}
-
-.item:nth-of-type(1) {
-    order: 1;
-}
-/* check this again */
-
-.item.page-item {
-    padding-bottom: 0;
-    border: none;
-    margin-bottom: 0;
-}
-
-.item {
-    border-bottom: var(--standard-border);
-    order: 12;
-    position: relative;
-    flex: 1 34%;
-    font-size: var(--fz3);
-    padding: calc(var(--h-margin) * 1.3) 0 calc(var(--h-margin) * 1.3) calc(var(--h-margin) * 2);
-}
-
-.item.page-item>.inner{
-    border-right: none;
-}
-
-.item>.inner {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    border-right: var(--standard-border);
-    padding-right: calc(var(--h-margin) * 2);
-}
-
-.page-item .item-desc {
+.overview .item-desc {
     margin-top: 0;
 }
 
@@ -373,7 +339,7 @@ a .material-icons{
     position: relative;
 }
 
-.page-item h1 {
+.overview h1 {
     margin-bottom: 1.5em;
 }
 
