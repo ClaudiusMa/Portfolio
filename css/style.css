@@ -523,11 +523,12 @@ a .material-icons{
 	}
 	.header{
 		display:none;
-	}
-	
+	}	
 }
 
-
+.projects{
+    padding: 2.5rem 0;
+}
 .product-container{
 	display: grid;
 	grid-gap: 1.5rem;
