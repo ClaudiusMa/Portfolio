@@ -327,20 +327,12 @@ a .material-icons{
 	100% {opacity:1;}
 }
 
-.overview .item-desc {
-    margin-top: 0;
-}
-
-.item-desc {
+.content {
     color: var(--text2);
     text-align: left;
     margin: 0.8em auto 0;
     line-height: 1.7;
     position: relative;
-}
-
-.overview h1 {
-    margin-bottom: 1.5em;
 }
 
 .summaries {
