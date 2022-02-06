@@ -341,15 +341,10 @@ a .material-icons{
     margin: 0;
     padding: 2.5rem 0;
     flex-basis: 100%;
-    font-weight: 400;
     text-align: left;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
     border-bottom: var(--standard-border);
-    flex-shrink: 2;
-    flex-grow: 1;
     line-height: 1.5;
+    color: var(--text2);
 }
 
 /* The history axis */
@@ -366,21 +361,14 @@ a .material-icons{
     padding: calc(1.5vmax + 1.5vmin) 0;
 }
 
-.summary>.inner {
-    width: 100%;
-}
-
 .history>.inner {
     border: none;
 }
-.history .summary-desc {
+.history{
     margin-bottom: 0;
     overflow: visible;
 }
-.summary-desc {
-    margin: 0 0 0.5rem;
-    color: var(--text2);
-}
+
 .h-items {
     position: relative;
     width: 100%;
