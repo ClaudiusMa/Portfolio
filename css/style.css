@@ -528,6 +528,7 @@ a .material-icons{
 
 .projects{
     padding: 2.5rem 0;
+    border-bottom: var(--standard-border);
 }
 .product-container{
 	display: grid;
