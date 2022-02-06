@@ -292,9 +292,10 @@ a .material-icons{
 	/* don't change this, it's icon in hearder */
 }
 
-.side_link{
-	/* Need add listern to change the color when hoover on  */
-}
+/* .side_link{
+	Need add listern to change the color when hoover on  
+} 
+*/
 
 .nav_label{
     padding: 2.5em 0 0.3em;
@@ -335,16 +336,10 @@ a .material-icons{
     position: relative;
 }
 
-.summaries {
-    width: 100%;
-    line-height: 1.5;
-    display: flex;
-    flex-wrap: wrap;
-}
 
 .summary {
     margin: 0;
-    padding: 1.5rem 0;
+    padding: 2.5rem 0;
     flex-basis: 100%;
     font-weight: 400;
     text-align: left;
@@ -354,11 +349,7 @@ a .material-icons{
     border-bottom: var(--standard-border);
     flex-shrink: 2;
     flex-grow: 1;
-}
-
-.summary>.inner {
-    padding: 1rem 2rem 1rem 0;
-    height: 100%;
+    line-height: 1.5;
 }
 
 /* The history axis */
@@ -553,13 +544,8 @@ a .material-icons{
 	}
 	
 }
-/* .projects>.inner{
-	display:flex;
-	flex-wrap:wrap;
-}
-.project_1, .project_2, .project_3, .project_4{
-	flex-basis:50%
-} */
+
+
 .product-container{
 	display: grid;
 	grid-gap: 1.5rem;
@@ -599,9 +585,6 @@ a .material-icons{
 
 .img1{
 	padding-top: 2rem;
-}
-.img2{
-
 }
 
 .footer {
