@@ -218,13 +218,6 @@ h2 {
 }
 
 
-.main {
-	display: flex;
-	flex-direction: row;
-	background: var(--bg);
-	transition: background-color var(--duration) var(--curve);
-}
-
 /* header */
 header {
     padding: 0.5rem var(--h-margin);
@@ -313,27 +306,24 @@ a .material-icons{
 
 .overview {
     position: relative;
-    font-size: var(--fz3);
     padding: calc(var(--h-margin) * 1.5) calc(var(--h-margin) * 2);
     max-width: 90rem;
     margin-left: var(--side-width);
+    margin: 0.8em auto auto var(--side-width);
     display: flex;
     flex-direction: column;
     height: 100%;
+
+    color: var(--text2);
+    font-size: var(--fz3);
+    text-align: left;
+    line-height: 1.7;
 
     animation: SlowShow calc(4 * var(--duration)) var(--curve) both;
 }
 @keyframes SlowShow{
 	0% {opacity:0;}
 	100% {opacity:1;}
-}
-
-.content {
-    color: var(--text2);
-    text-align: left;
-    margin: 0.8em auto 0;
-    line-height: 1.7;
-    position: relative;
 }
 
 
@@ -560,17 +550,6 @@ a .material-icons{
 	}
 }
 
-
-
-
-.word_word{
-	margin-top: 1rem;
-}
-
-.img1{
-	padding-top: 2rem;
-}
-
 .footer {
     color: var(--text3);
     text-align: center;
@@ -581,4 +560,24 @@ a .material-icons{
 
 .inner-footer {
     border: none;
+}
+
+
+/* CU */
+.project{
+    position: relative;
+    padding: calc(var(--h-margin) * 1.5) calc(var(--h-margin) * 2);
+    max-width: 90rem;
+    margin-left: var(--side-width);
+    margin: 0.8em auto auto var(--side-width);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    color: var(--text2);
+    font-size: var(--fz3);
+    text-align: left;
+    line-height: 1.7;
+
+    animation: SlowShow calc(4 * var(--duration)) var(--curve) both;
 }
