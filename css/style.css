@@ -327,16 +327,6 @@ a .material-icons{
 }
 
 
-.textsolo {
-    margin: 0;
-    padding: 2.5rem 0;
-    flex-basis: 100%;
-    text-align: left;
-    border-bottom: var(--standard-border);
-    line-height: 1.5;
-    color: var(--text2);
-}
-
 /* The history axis */
 .history {
     padding: 3.5rem 0 2.5rem 0;
@@ -564,6 +554,18 @@ a .material-icons{
 
 
 /* CU */
+
+
+.textsolo {
+    margin: 0;
+    padding: 2.5rem 0;
+    flex-basis: 100%;
+    text-align: left;
+    border-bottom: var(--standard-border);
+    line-height: 1.5;
+    color: var(--text2);
+}
+
 .project{
     position: relative;
     padding: calc(var(--h-margin) * 1.5) calc(var(--h-margin) * 2);
@@ -597,6 +599,6 @@ a .material-icons{
     display:inline-block;
     margin-left: 125px;
     text-align: center;
-
 }
+
 
