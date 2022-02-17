@@ -601,4 +601,10 @@ a .material-icons{
     text-align: center;
 }
 
+.video img{
+    height:500px;
+    position: relative;
+    margin-left: 100px;
+}
+
 
