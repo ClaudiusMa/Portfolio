@@ -581,3 +581,22 @@ a .material-icons{
 
     animation: SlowShow calc(4 * var(--duration)) var(--curve) both;
 }
+
+.problem-demo{
+    background-color: black;
+    height: 500px;
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.problem-demo p{
+    color: grey;
+    font-size: large;
+    display:inline-block;
+    margin-left: 125px;
+    text-align: center;
+
+}
+
