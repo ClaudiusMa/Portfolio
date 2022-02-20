@@ -52,6 +52,7 @@ body{
 
 	/* header */
 	--side-width: 250px;
+    --actual-width: 100vw - 250px;
 
 	/* margin-setting */
 	--h-margin: 1.25rem;
@@ -75,7 +76,7 @@ body{
 	--text4: #d5d5d5;
 	--fz1: 1.87em;
 	--fz2: 1.47em;
-	--fz3: 0.93em;
+	--fz3: 0.97em;
 
 
 }
@@ -211,7 +212,7 @@ h2 {
 
 .mask {
     position: fixed;
-    z-index: 998;
+    z-index: 999;
     border: calc(var(--mask-width)/ 2) solid var(--main);
     background: var(--main);
     pointer-events: none;
@@ -553,19 +554,8 @@ a .material-icons{
 }
 
 
-/* CU */
 
-
-.textsolo {
-    margin: 0;
-    padding: 2.5rem 0;
-    flex-basis: 100%;
-    text-align: left;
-    border-bottom: var(--standard-border);
-    line-height: 1.5;
-    color: var(--text2);
-}
-
+/* Project share setting  */
 .project{
     position: relative;
     padding: calc(var(--h-margin) * 1.5) calc(var(--h-margin) * 2);
@@ -583,6 +573,31 @@ a .material-icons{
 
     animation: SlowShow calc(4 * var(--duration)) var(--curve) both;
 }
+
+.block {
+    margin: 0;
+    padding: 2.5rem 0;
+    flex-basis: 100%;
+    text-align: left;
+    border-bottom: var(--standard-border);
+    line-height: 1.5;
+    color: var(--text2);
+}
+
+/* CU */
+
+.twotext{
+    display:flex;
+}
+.t1{
+    width: 50%;
+    padding-right: 1em;
+}
+.t2{
+    width: 50%;
+    padding-right: 1em;
+}
+
 
 .problem-demo{
     background-color: black;
