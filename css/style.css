@@ -619,6 +619,7 @@ a .material-icons{
 
 .image img{
     max-height: 350px;
+    padding:1em 0.5em 0 0.5em;
 }
 
 .polaroid {
