@@ -557,7 +557,7 @@ a .material-icons{
 
 /* Project share setting  */
 .project{
-    position: relative;
+    position: absolute;
     padding: calc(var(--h-margin) * 1.5) calc(var(--h-margin) * 2);
     max-width: 90rem;
     margin-left: var(--side-width);
@@ -584,8 +584,13 @@ a .material-icons{
     color: var(--text2);
 }
 
-/* CU */
+.block ul{
+    list-style: disc outside;
 
+}
+
+
+/* CU */
 .twotext{
     display:flex;
 }
@@ -598,7 +603,22 @@ a .material-icons{
     padding-right: 1em;
 }
 
+.video img{
+    height:500px;
+    position: relative;
+    margin-left: 100px;
+}
 
+.image{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-height: 350px;
+    overflow: hidden;
+    margin-top: 1.5rem;
+    column-gap: 1.5rem;
+}
+
+/* Temporary style */
 .problem-demo{
     background-color: black;
     height: 500px;
@@ -616,10 +636,5 @@ a .material-icons{
     text-align: center;
 }
 
-.video img{
-    height:500px;
-    position: relative;
-    margin-left: 100px;
-}
 
 
