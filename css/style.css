@@ -78,6 +78,9 @@ body{
 	--fz2: 1.47em;
 	--fz3: 0.97em;
 
+    --pattern-bg: radial-gradient(var(--border) calc( .5 * var(--border-width)), var(--bg) calc( .5 * var(--border-width)));
+    --pattern-size: calc( 2 * var(--border-width)) calc( 2 * var(--border-width));
+
 
 }
 
@@ -652,9 +655,22 @@ a .material-icons{
     font-weight: var(--bold-weight);
     line-height: 1;
     position: relative;
-    text-shadow: 3px 3px 0 var(--border);
+    text-shadow: -3px -3px 0 white;
     transition: var(--transition);
 
+}
+
+.bignumber::before {
+    content: "";
+    width: 50%;
+    height: 55%;
+    background-image: var(--pattern-bg);
+    background-size: var(--pattern-size);
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0%;
+    transition: var(--transition);
 }
 
 .ps1{
