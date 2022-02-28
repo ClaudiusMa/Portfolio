@@ -674,16 +674,40 @@ a .material-icons{
     transition: var(--transition);
 }
 
-.ps1{
-    padding-bottom: 5em;
+.twocol{
     display:grid;
-    grid-template-columns: 300px 1fr;
-    column-gap: 1em;
-    max-height: 100%;
-
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 33% 33% 33%;
+    column-gap: 2em;
+    row-gap:2em;
 }
 
-.ps1text{
+/* change it, after figuring out sizing in grid */
+.twocol img{
+    max-width: 300px
+}
+
+.twocol-img1{
+    justify-self: center;
+    grid-row: 2 / span 2;
+}
+
+.twocol-img2{
+    justify-self: center;
+    grid-row:2;
+    grid-column: 2;
+    
+}
+
+.twocol-img3{
+    justify-self: center;
+    grid-row:3;
+    grid-column: 2;
+    overflow:hidden;
+    
+}
+
+.twocol-text1{
     display:flex;
     flex-direction: column;
     align-items: end;
@@ -693,37 +717,8 @@ a .material-icons{
     align-self: center;
 }
 
-
-.ps1text>em, .ps2text>em{
-    font-size: 1.5em;
-    font-weight: var(--bold-weight);
-    font-style: normal;
-    display: block;
-}
-
-.ps1img{
+.twocol-text2{
     grid-column: 2;
-    max-width: 100%;
-    justify-self: center;
-    align-self: center;
-}
-
-.ps1img img{
-    max-height: 500px;
-}
-
-
-.ps2{
-    padding-bottom: 2.5rem;
-    display:grid;
-    grid-template-columns: auto auto 300px;
-    column-gap: 1em;
-    max-height: 100%;
-
-}
-
-.ps2text{
-    grid-column: 3;
     display:flex;
     flex-direction: column;
     align-items:flex-start;
@@ -734,26 +729,25 @@ a .material-icons{
 }
 
 
-.ps2img1{
-    grid-column: 1;
-    grid-row: 1;
-    max-width: 100%;
-    justify-self: center;
-    align-self: center;
-}
-
-.ps2img2{
-    grid-column: 2;
-    grid-row: 1;
-    max-width: 100%;
-    justify-self: center;
-    align-self: center;
+.twocol-text1>em, .twocol-text2>em{
+    font-size: 1.5em;
+    font-weight: var(--bold-weight);
+    font-style: normal;
+    display: block;
 }
 
 
-.ps2 img{
-    max-height: 500px;
+.threecol{
+    display:grid;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 33% 33% 33%;
+    column-gap: 2em;
+    row-gap:2em;
 }
+
+
+
+
 
 
 
