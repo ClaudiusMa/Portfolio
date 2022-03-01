@@ -562,12 +562,14 @@ a .material-icons{
 .project{
     position: relative;
     padding: calc(var(--h-margin) * 1.5) calc(var(--h-margin) * 2);
-    max-width: 90rem;
+    max-width: calc(100vmax - 250px);
     margin-left: var(--side-width);
     margin: 0.8em auto auto var(--side-width);
     display: flex;
     flex-direction: column;
     height: 100%;
+
+    overflow: hidden;
 
     color: var(--text2);
     font-size: var(--fz3);
@@ -585,6 +587,8 @@ a .material-icons{
     border-bottom: var(--standard-border);
     line-height: 1.5;
     color: var(--text2);
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .block ul{
@@ -740,10 +744,12 @@ a .material-icons{
 .threecol{
     display:grid;
     grid-template-rows: 50% 50%;
-    grid-template-columns: 33% 33% 33%;
+    grid-auto-columns: repeat(12,minmax(40px, auto));
     column-gap: 2em;
     row-gap:2em;
+    
 }
+
 
 .threecol-text1{
     display:flex;
@@ -779,8 +785,13 @@ a .material-icons{
 
 .threecol-v1{
     justify-self:end;
-    grid-row:1;
-    grid-column: 3;
+    grid-row-start:1;
+    grid-row-end:1;
+    grid-column: 3/3;
+    max-width: 100%;
+}
+
+.threecol-v1 video{
     max-width: 100%;
 }
 
