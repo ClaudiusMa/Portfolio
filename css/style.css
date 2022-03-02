@@ -186,6 +186,16 @@ h2 {
 	margin-bottom: 1.2em;
 }
 
+h3 {
+	font-size:var(--fz3);
+	font-weight: var(--semibold-weight);
+	line-height: 1;
+    position: relative;
+    color: var(--text);
+    overflow: hidden;
+	margin-bottom: 1.2em;
+}
+
 /* mask */ 
 .mt {
     top: 0;
@@ -660,7 +670,7 @@ a .material-icons{
     font-weight: var(--bold-weight);
     line-height: 1;
     position: relative;
-    text-shadow: -3px -3px 0 white;
+    text-shadow: -4px -4px 0 white;
     transition: var(--transition);
 
 }
@@ -674,7 +684,7 @@ a .material-icons{
     position: absolute;
     z-index: -1;
     top: 0;
-    right: 0%;
+    right: 10%;
     transition: var(--transition);
 }
 
