@@ -86,7 +86,7 @@ body{
 
 /* General accessibility  */
 @media (prefers-reduced-motion: reduce){
-    .main .h-item, .main, .main .h-axis::after, .main .h-axis::before, .main .h-year{
+    .h-item, .h-axis::after, .h-axis::before, .h-year{
         animation:none;
     }
 }
@@ -113,7 +113,7 @@ body{
 /* need to make more appealing  */
 
 @media (max-width: 750px){
-	.main .topnav {
+	.topnav {
 		display:inherit;
 	}
 }
