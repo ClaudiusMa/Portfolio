@@ -802,7 +802,17 @@ a .material-icons{
 }
 
 
+.jew-img{
+    grid-column: 1/8;
+    grid-row: 1;
+    align-self: center;
+}
 
+.jew-text{
+    grid-column: 9/-1;
+    grid-row: 1;
+    align-self: center;
+}
 
 
 
