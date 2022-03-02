@@ -47,12 +47,12 @@ body{
 	--border-type: dotted;
 	--border-width: 1px;
 	--standard-border: var(--border-width) var(--border-type) var(--border);
-	--happy-border: var(--border-width) var(solid) var(--main); /* need to figure out hoover on axis */
+	/* --happy-border: var(--border-width) var(solid) var(--main); need to figure out hoover on axis */
 	--radius: 0px;
 
 	/* header */
 	--side-width: 250px;
-    --actual-width: 100vw - 250px;
+    --actual-width: calc(100vw - 250px);
 
 	/* margin-setting */
 	--h-margin: 1.25rem;
