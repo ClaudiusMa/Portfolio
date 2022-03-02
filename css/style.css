@@ -58,7 +58,7 @@ body{
 	--h-margin: 1.25rem;
 
 	/* mask setting */
-	--mask-width: .7rem;
+	--mask-width: 0.8rem;
 
 	/* font setting */
     --default-font: Helvetica,sans-serif;
@@ -148,7 +148,7 @@ body{
     position: absolute;
     right: var(--mask-width);
     top: var(--mask-width);
-    z-index: 999;
+    z-index: 998;
   }
   
   /* Add a grey background color on mouse-over */
